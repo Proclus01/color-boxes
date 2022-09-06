@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import ColorsContainer from './ColorsContainer';
 
 function App() {
   return (
     <div className="App">
-      Color boxes!
+      <ColorsContainer />
     </div>
   );
 }
