@@ -1,4 +1,6 @@
 .colorsContainer {
-    width: 750px;
-    height: 375px;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
