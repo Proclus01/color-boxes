@@ -3,9 +3,6 @@ import {choice} from './helpers.js';
 import './ColorBox.css';
 
 class ColorBox extends Component {
-    static defaultProps = {
-        allColors: ['purple', 'magenta', 'violet', 'pink']
-    }
 
     constructor(props) {
         super(props);
