@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
+import {choice} from './helpers.js';
 import './ColorBox.css';
 
 class ColorBox extends Component {
     static defaultProps = {
-        allColors: ['purple', 'magenta', 'lilac', 'pink']
+        allColors: ['purple', 'magenta', 'violet', 'pink']
     }
 
     constructor(props) {
         super(props);
-        this.state = { color: 'purple' };
-
+        this.state = { color: choice(this.props.allColors) };
         this.handleClick = this.handleClick.bind(this);
     }
 
-    rng() {
-        return Math.floor(Math.random() * 256);
+    pickColor() {
+        let newColor 
+        do {
+            newColor = choice(this.props.allColors);
+        } while (newColor === this.state.color)
+
+        this.setState({ color: newColor });
     }
 
     handleClick(event) {
-        
+        this.pickColor();
     }
 
     render() {
